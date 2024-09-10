@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//1. rotate the string given number of times
+// str="program"  count=3  output="grampro"
+
+let str="program"
+count=prompt("Enter Number:")
+res=""
+for(i=count;i<str.length;i++){
+
+    res+=str[i]
+
+}
+for(i=0;i<count;i++){
+
+    res+=str[i]
+}
+
+console.log(res);
+
+/////////////////////////////////////////////////////////
+
+
+
+//   1 2 3 4 5
+//   1     4
+//     1   3
+//      1 2
+//       1
+//      1 2
+//     1   3
+//   1     4
+//   1 2 3 4 5
+
+
+rows=5
+for(i=rows;i>0;i--){
+    s=""
+    for(sp=1;sp<=rows-i;sp++){
+        s=s+" "
+    }
+    for(j=1;j<=i;j++){
+        if(i==rows||j==1||i==j){
+        s=s+j+" "
+        }
+    
+    else{
+        s=s+" "+" "
+    }
+    }
+    console.log(s)
+}
+
+
+
+for(i=2;i<=rows;i++){
+    s=""
+    for(sp=rows-i;sp>=1;sp--){
+        s=s+" "
+    }
+    for(j=1;j<=i;j++){
+        if(i==2||j==1||j==i||i==rows){
+            s=s+j+" "
+        }
+        else{
+            s=s+" "+" "
+        }
+    }
+    console.log(s)
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//  modify the element in the array when both element and index are even numbers
+// arr=[10,8,6,2,14,3,1]    output=[even,8,even,2,even,3,1]
+
+let arr=[10,8,6,2,14,3,1]
+
+for(i=0;i<arr.length;i++){
+    if(i%2==0 && arr[i]%2==0){
+        
+        arr[i]="even"
+        
+    }
+}
+    console.log(arr)
+
+    </script>
+</body>
+</html>
